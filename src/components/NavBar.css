@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+}
+
+.navbar {
+    width: 100vw;
+    height: 80px;
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link {
+    color: rgb(185, 121, 2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: pink;
+}
