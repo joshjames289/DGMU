@@ -1,0 +1,33 @@
+.dgmu-members {
+    color: beige;
+    text-shadow: 3px 3px 3px rgb(241, 51, 51); 
+    font-size: 50px;
+    margin: 20px;
+}
+
+.community-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/imgs/community-background.jpg);
+    background-size: cover; 
+    background-repeat: repeat-y;
+}
+
+.member-container {
+    margin: 10px;
+    background-color: rgba(252, 97, 97, 0.7);
+    border-radius: 10px;
+}
+
+.info-container {
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-title {
+    font-weight: 600;
+}
+

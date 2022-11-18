@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import './Community.css';
 
 
 function Community() {
@@ -25,16 +26,30 @@ function Community() {
     },[]);
 
     return (
-        <div className='container'>
-            <h1>Community</h1>
+        <div className='community-container'>
+            <h1 className='dgmu-members'>DGMU Members</h1>
             {community.map(user => {
                 return (
-                <div>
-                    <h1>{user.username}</h1>
-                    <p>{user.gender}</p>
-                    <p>{user.skill_level}</p>
-                    <p>{user.willing_to_bet}</p>
-                    <p>{user.pdga_number}</p>
+                <div className='member-container'>
+                    <div className='info-container'>
+                        <h2>{user.username}</h2>
+                    </div>
+                    <div className='info-container'>                        
+                        <p className='info-title'>Gender: </p>
+                        <p>{user.gender}</p>
+                    </div>
+                    <div className='info-container'>                        
+                        <p className='info-title'>Skill Level (1-10): </p>
+                        <p>{user.skill_level}</p>
+                    </div>
+                    <div className='info-container'>                        
+                        <p className='info-title'>Willing to Bet: </p>
+                        <p>{user.willing_to_bet}</p>
+                    </div>
+                    <div className='info-container'>                        
+                        <p className='info-title'>PDGA Number: </p>
+                        <p>{user.pdga_number}</p>
+                    </div>
                 </div>
                 )
             })}

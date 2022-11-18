@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import './CreateMember.css';
 
 
 function CreateMember() {
@@ -36,16 +37,29 @@ function CreateMember() {
     }
 
     return (
-        <div className='container'>
-            <h1>Create Member</h1>
+        <div className='create-container'>
+            <h1 className='create-title'>Create Member</h1>
             <form>
-                <div>
-                    <input onChange={handleChange} name='username' value={input.username} autoComplete='off' placeholder='Username'></input>
+                <div className='user-container'>
+                    <p>Disc Golfer: </p>
+                    <input onChange={handleChange} name='username' value={input.username} autoComplete='off' placeholder='username'></input>
                 </div>
-                <input onChange={handleChange} name='gender' value={input.gender} autoComplete='off' placeholder='gender (optional)'></input>
-                <input onChange={handleChange} name='skill_level' value={input.skill_level} autoComplete='off' placeholder='Skill level (optional)'></input>
-                <input onChange={handleChange} name='willing_to_bet' value={input.willing_to_bet} autoComplete='off' placeholder='yes or no'></input>
-                <input onChange={handleChange} name='pdga_number' value={input.pdga_number} autoComplete='off' placeholder='PDGA number (optional)'></input>
+                <div className='gender-container'>
+                    <p>Gender: </p>
+                    <input onChange={handleChange} name='gender' value={input.gender} autoComplete='off' placeholder='optional'></input>
+                </div>
+                <div className='skill-container'>
+                    <p>Skill Level: </p>
+                    <input onChange={handleChange} name='skill_level' value={input.skill_level} autoComplete='off' placeholder='1-10 (optional)'></input>
+                </div>
+                <div className='bet-container'>
+                    <p>Willing To Bet?: </p>
+                    <input onChange={handleChange} name='willing_to_bet' value={input.willing_to_bet} autoComplete='off' placeholder='yes or no'></input>
+                </div>
+                <div className='pdga-container'>
+                    <p>PDGA Number: </p>
+                    <input onChange={handleChange} name='pdga_number' value={input.pdga_number} autoComplete='off' placeholder='optional'></input>
+                </div>
                 <button onClick={handleClick}>ADD MEMBER</button>
             </form>
         </div>
